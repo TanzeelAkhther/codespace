@@ -1,1 +1,16 @@
+Packages are Go's way of organizing and reusing code
+In Go package name during the import statement is surrounded by double quotes.
+
+//-This is used to make a single-line comment.
+
+/*
+This is a
+multi-line
+comment
+*/
+
+The main function is a special type of function and it is the entry point of the executable program
+
+Go is a case-sensitive language
+Go is a compiled language.
 
