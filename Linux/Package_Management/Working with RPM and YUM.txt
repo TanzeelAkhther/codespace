@@ -26,10 +26,13 @@ remove command : yum remove httpd
 update command for a specific package : yum update telnet      (package name is telnet)
 update all packages: yum update
 
-show all repos added to your system: yum repolist
+show all soft repos added to your system: yum repolist
 
 yum provides scp :- use command name as argument, and we are looking for the package the provided the SCP command using the yum provides command.
 
+
+Few lab commands :
+rpm -qa | grep wget  - to query the database and find out wget
 
 
 
