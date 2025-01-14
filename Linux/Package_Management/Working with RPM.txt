@@ -1,1 +1,14 @@
+Intallation of package: rpm-ivh telnet.rpm   
+Breakedown of command: i is for install,v is for verbose and is used to print detailed output of the command.
+
+Uninstall a package: rpm -e telnet.rpm
+Upgrade a package: rpm -Uvh telnet.rpm   (Capital "U")
+
+The RPM database stores info about all RPM package installed in your system.It is stored in the /war/lib/rpm directory. It is used to query what packages are installed.
+
+Query a Package: rpm -q telnet.rpm
+Verify a Package: rpm -Vf <path to file> 
+verifying a package compares info about files installed from a package with the same infor from the original package.
+
+NOTE: RPM does not resolve package dependencies on its own hence we make use of a higher-level package manager called YUM.
 
