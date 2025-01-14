@@ -1,1 +1,39 @@
+.RPM Based Distribution 
+RHEL,Centos,Fedora
+
+.DEB Based Distribution
+Ubuntu,Debian,LinuxMint
+
+Centos - is a community driven enterprise OS which is formed from Red Hat.
+
+Package- Is a compressed archive that contains all the files that are required by our particular software to run.
+Scenario:Supposewe want to install a simple image editing software such as GIMP(GNU Image Manipulation Program) in this system.
+Example:To do this, we can make use of the gimp.deb package. This gimp.deb contains all the software binaries and files needed for the image editor to run along with the metadata, which provided info about the software itself.
+
+Package Manager- is a software in a Linux system that provides a consistent and automated process of installing, upgrading, configuring, and removing packages from the OS
+Essential Functions of a package manager are ensuring the integrity and authenticity of the package by verifying their digital cert and checksums.
+simplified Package Management,Grouping Packages and Manage Dependencies.
+
+Types Of Package Managers- DPKG: Base package manager for Debian-based distributions.
+                           APT: a newer front end for the dpkg system found in Debian-based distributions such as Ubuntu,Linux Mint and Elementary OS
+                          APT-GET: is the traditional front-end for the dpkg-system found in Debian-based distributions
+
+RPM -the base package manager found in Red Hat-based distributions such as Red Hat Enterprise Linux, CentOS and Fedora.
+YUM -A front-end for the RPM System found in Red Hat-based distributions
+DNF- A more feature-rich front-end for the RPM System
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
