@@ -1,0 +1,35 @@
+RPM
+
+Intallation of package: rpm-ivh telnet.rpm   
+Breakedown of command: i is for install,v is for verbose and is used to print detailed output of the command.
+
+Uninstall a package: rpm -e telnet.rpm
+Upgrade a package: rpm -Uvh telnet.rpm   (Capital "U")
+
+The RPM database stores info about all RPM package installed in your system.It is stored in the /war/lib/rpm directory. It is used to query what packages are installed.
+
+Query a Package: rpm -q telnet.rpm
+Verify a Package: rpm -Vf <path to file> 
+verifying a package compares info about files installed from a package with the same infor from the original package.
+
+NOTE: RPM does not resolve package dependencies on its own hence we make use of a higher-level package manager called YUM.
+
+YUM - Yellowdog Updater Modified, and it is a free and open-source package Manager that works on RPM based linux system. It works with software repo which are essentially a collections of packages and provides packages and dependency management on RPM based distros.
+The repo info is store in the /etc/yum.respos.d and the repo files have a .repo extension.
+ex: /etc/yum.repos.d/redhat.repo
+    /etc/yum.repos.d/nginx.repo  Install a nginx package.
+
+
+YUM commands
+Install command : yum install httpd
+remove command : yum remove httpd
+update command for a specific package : yum update telnet      (package name is telnet)
+update all packages: yum update
+
+show all repos added to your system: yum repolist
+
+yum provides scp :- use command name as argument, and we are looking for the package the provided the SCP command using the yum provides command.
+
+
+
+
