@@ -24,7 +24,7 @@ It installs as a single binary which can be set up very quickly, allowing us to 
 it is basically used as an infrastructure provisioning tool.
 It uses HCL(HashiCorp Configuration Language) which is a simple declarative language to define the infra resources to be provisioned as blocks of code. All infra resources can be defined within configuration files that have a .tf extension.
 
-
+z
 
 
 Advantages: deploy Infra across multiple platform, including private and public cloud sucha as on-premises vSpher Cluster or cloud solutions such as AWS,GCP,Azure,etc.
@@ -34,6 +34,22 @@ Tools through provider support.
 network infra tools like F5 BIG-IP, CLoudflare,DNS, Palo ALto Networks and Inflobox
 Monitoring and Data management tool: Datadog,Grafana,Auth0,wavefront, and Sumo Logic.
 Databases: Mongo DB,InfluxDB,MySQL,PostgreSQL and version control systems like Github,Bitbucket or Gitlab.
+
+
+Terraform works in three phases: init,plan and apply.
+init:initializes the project and identified the providers to be used for the target environment
+plan:Terraform drafts a plan to get to the target state. 
+apply:Terraform makes the necessary changes required on the target environment to bring it to the desired state.
+Note: If for some reason the env was to shift from the desired state, then a subsequent Terraform apply will bring it back to the desired state.
+
+Every object that terraform manages is called a resource.
+A resource can be a compute instance, a database server in the cloud, or in a physica server on-premise that Terraform manages.
+
+Terraform manages the lifecycle of resources from its provisioning to configurations to decomissioning.
+
+The state is a blueprint of the infrastructure deployed by Terraform.
+
+Terraform Cloud and Terraform Enterprise provides additonal features that allow simplified collaboration between teams managing infrastructure, improved security and a centralized UI to manage terraform deployments.
 
 
 
