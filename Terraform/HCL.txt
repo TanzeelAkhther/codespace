@@ -1,0 +1,42 @@
+Terraform uses configuration files which  are written in HCL to deploy infra resources.
+
+What is a resource?
+A resource is an object data for managers. It could be a file on a local host or it could be aVM on the cloud such as EC2 instance.
+It could be services like S3 buckets, ECS, DynamoDB tables, IM users, IM groups, rules, policies, etc
+
+Local file type of resource and a special kind of resource callled a "random pit"
+
+HCL- HashiCorp Configuration Language.
+
+HCL syntax
+<block> <parameters> {
+  key1 = value1
+  key2 = value2
+}
+Example:
+resource "local_file" "pet" {        #resource-block name    #"local_file"-Resource Type(local=provider,file=resource)    #pet - Resource name
+  filename = "/root/pets.text"    /*Arguments
+  content = "We love pets"         */
+}
+block-containes a set of arguments in key value pair format representing the configuration data.
+ or A block in terraform contains information abouth the infra platform and a set of resources within that platform that we want to create.
+
+Example of a resource file created fro provisionin an AWS EC2 Instance:
+
+resource "aws_instance" "webserver" {
+  ami = ".........."
+  instance_type = "t2.micro"
+}
+
+terraform show-This command inspects the state file and displays the resource details.
+
+Immutable Infrastructure- Even when the change we made is trivial, Terraform will delete the old file and then create a new file with the update configurations.This type of infra is called an Imuutable infra.
+
+
+
+
+
+
+
+
+
