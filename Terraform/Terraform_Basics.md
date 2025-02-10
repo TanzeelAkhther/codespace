@@ -117,12 +117,13 @@ the command line flag of –var or –var-file takes the highest priority.
 
 **Resource Attributes**
 link two resources
-syntax for using thsi reference expressio is resource type followed by the resource name and attribute to be used.
+
+syntax for using this reference expression is resource type followed by the resource name and attribute to be used.
 
 ```
 resource "local_file" "pet"{
   filename = var.filename
-  content = "My Favourite pet is ${random_pet.my-pet.id}  #id generates after configurations is applied.
+  content = "My Favourite pet is ${random_pet.my-pet.id}"  #id generates after configurations is applied.
 }
 resource "random_pet" "my-pet"{
   prefix = var.prefix
