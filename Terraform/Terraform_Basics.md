@@ -132,6 +132,30 @@ resource "random_pet" "my-pet"{
 }
 ```
 
+**Resource Dependencies**
+
+It uses the following order to provision them :
+
+First Terraform creats random_pet resource, and then it creates a local file resource.
+When resources are deleted and Terraform deletes it in the revers order, the local file and then the random_bet.This type of dependency is called **implicit dependency**.
+here we are not explicitly specifying which resource is dependent on which other resource Terraform figures it out itself.
+
+Explicitly specifying a depedency is only necessary when a resource relies on some other resource indirectly, and it does not make use of a reference expression is called **Explicit dependency**
 
 
+```
+resource "local_file" "pet"{
+  filename = var.filename
+  content = "My Favourite pet is ${random_pet.my-pet.id}"  #id generates after configurations is applied.
+  depends_on = [
+    random_pet.my-pet
+  ]
+
+}
+resource "random_pet" "my-pet"{
+  prefix = var.prefix
+  seperator = var.seperator
+  length = var.length
+}
+```
 
