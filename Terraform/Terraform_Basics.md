@@ -50,6 +50,7 @@ variable "context" {
 }
 ```
 replace the argument values with the variable names prefixed with a var like this.
+
 **main.tf**
 ```
 resource "local_file" "pet" {
@@ -57,6 +58,44 @@ resource "local_file" "pet" {
   content = var.content
 }
 ```
+
+**different parameters in variable**
+
+default = specify the default value for a variable
+type = "data_type"  #optional but when used it enforces the type of variable being used
+description = "content"  #optional but  a good practice to use this argument to describe what the variable is used for
+
+**Kind of data types that is used by terrraform**
+string, number, bool, any, list, map, object, tuple, set
+
+map - data represent in the form of key-value pairs
+
+No duplicate values in define variable
+We can  type list, objects, set as
+
+```
+type = list(string)
+
+variable "bella" {
+type = object ({
+  name = string
+  color = string
+  food = list(string)
+  favourite_pet = bool
+ })
+default = {
+  name = "bella"
+  color = "brown"
+ }
+}
+```
+
+diffenrece in tuple and a list is that list uses eleement of the same variable type whereas tuple can used differents variable types.
+
+
+
+
+
 
 
 
