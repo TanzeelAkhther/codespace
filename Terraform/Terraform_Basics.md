@@ -75,7 +75,7 @@ We can  type list, objects, set as
 
 ```
 type = list(string)
-
+------------------
 variable "bella" {
 type = object ({
   name = string
@@ -92,13 +92,44 @@ default = {
 
 diffenrece in tuple and a list is that list uses eleement of the same variable type whereas tuple can used differents variable types.
 
+**Command to pass variable in the CLI itself**
+```
+terraform apply **-var** "filename=/rrot/pets.txt" -var "content=We love pets!" -var "prefix=Mrs" -var "seperator= " -var "length=2"
+```
 
+**Environment Variables**
+use Environment Variables with the TF_VAR_ followed by the anme of a declard variable like this
+```
+export TF_VAR_filename="/root/pets.txt"
+export TF_VAR_content="We love pets!"
+terraform apply
+```
 
+Variable definition file is called terraform.tfvars or terraform.tfvars.json or by any other name ending with .auto.tfvars or .auto.tfvars.json will be automatically loaded by Terraform.
 
+if we use any other filename such as variable.tfvars we wiill have to parse it along with a command line flag called -var-file like this
+```
+terraform apply -var-file variable.tfvars
+```
+Which method has the highest priority in Variable Definition Precedence?
+Terraform follows a variable definition precedence order to determine the value and
+the command line flag of –var or –var-file takes the highest priority.
 
+**Resource Attributes**
+link two resources
+syntax for using thsi reference expressio is resource type followed by the resource name and attribute to be used.
 
-
-
+```
+resource "local_file" "pet"{
+  filename = var.filename
+  content = "My Favourite pet is ${random_pet.my-pet.id}  #id generates after configurations is applied.
+}
+resource "random_pet" "my-pet"{
+  prefix = var.prefix
+  seperator = var.seperator
+  length = var.length
+}
+```
 
 
 
