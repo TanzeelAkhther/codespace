@@ -35,6 +35,30 @@ resource "random_pet" "my-pet"{
 **Note: we have to initialize the directory by running terraform init command because whenever we add a resource for a provider that has not been used so far in the configuration directory, it will require us to initialize once again to install the required providers.**
 
 
+**Using Input Variables**
+
+To create a variable use a keyword **variable** followed by the **variable name**
+we can provide a default value for the variable and this is an optional parameter.
+
+**vaiable.tf**
+```
+variable "filename" {
+          default = "/root/pets.txt"
+}
+variable "context" {
+          default = "We love pets!"
+}
+```
+replace the argument values with the variable names prefixed with a var like this.
+**main.tf**
+```
+resource "local_file" "pet" {
+  filename = var.filename    #prefix "var" with the variable_name
+  content = var.content
+}
+```
+
+
 
 
 
