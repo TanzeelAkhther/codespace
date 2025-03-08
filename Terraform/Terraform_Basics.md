@@ -158,4 +158,25 @@ resource "random_pet" "my-pet"{
   length = var.length
 }
 ```
+**Output Variables**
+These variables can be used to store the value of an expression in Terraform.
+
+*general Syntax*
+
+```
+output "<variable_name>" { 
+  value = "<variable_value>"
+  <arguments>
+
+}
+```
+We can make use of **Terraform output** command to print the value of the output variables.
+
+```
+output "welcome-message" {
+  value = local_file.welcome
+  sensitive = true
+}
+```
+
 
