@@ -1,0 +1,6 @@
+COMMANDS
+
+ping <ip or name>
+hostname
+ssh <name>
+curl <url>
