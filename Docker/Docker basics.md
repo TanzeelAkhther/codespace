@@ -71,7 +71,7 @@ docker rmi nginx:alpine
 
 Remove multiple images at once
 ```
-docker postgres redis mysql nginx:1.14-alpine kodekloud/simple-webapp-mysql kodekloud/simple-webapp
+docker rmi postgres redis mysql nginx:1.14-alpine kodekloud/simple-webapp-mysql kodekloud/simple-webapp
 ```
 
 
