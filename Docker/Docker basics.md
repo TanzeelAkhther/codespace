@@ -66,7 +66,7 @@ docker run -d --name webapp nginx:1.14-alpine
 
 Remove image with a different tag
 ```
-docker rmi nginx:alpine
+docker rmi nginx:alpine   #ngninx:<tag>
 ```
 
 Remove multiple images at once
