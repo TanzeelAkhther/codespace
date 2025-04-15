@@ -10,7 +10,7 @@ docker ps
 ```
 Each container automatically gets a random ID and name created for it by Docker
 
-To see all running containers or not, it will display running as welll as previously stopped or exited containers
+To see all running containers or not, it will display running as well as previously stopped or exited containers
 ```
 docker ps -a
 ```
@@ -21,6 +21,7 @@ docker stop silly_samet
 To remove the container permanently use rm command, output prints the name back
 ```
 docker rm silly_samet
+docker rm <container_id or name> # we can remove multiple container by provide the name or id dividing them by a space
 ```
 List images present or available on our Host
 ```
