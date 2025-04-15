@@ -30,3 +30,36 @@ to remove image that in no longer required use rmi commnad with image name
 ```
 docker rmi nginx
 ```
+
+Pull - Download an Image (It will also run the container)
+```
+docker run nginx
+```
+
+only pull the image in your host
+```
+docker pull nginx
+```
+
+You can append a command for a container to run accordingly
+```
+docker run ubuntu sleep 5  #container stops or sleeps after 5 sec
+```
+
+Exec - Execute a command
+```
+docker exec <container_name> cat/etc/hosts    #to list out the contents in hosts file
+```
+
+Run - attach and detach
+```
+docker run -d kodekloud/simple-webapp   #detach the container and run in background
+
+docker attach <container_name or ID>  #to attach the container
+```
+
+
+
+
+
+
