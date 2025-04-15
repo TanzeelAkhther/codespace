@@ -59,6 +59,21 @@ docker run -d kodekloud/simple-webapp   #detach the container and run in backgro
 docker attach <container_name or ID>  #to attach the container
 ```
 
+Run the container and provide a name
+```
+docker run -d --name webapp nginx:1.14-alpine
+```
+
+Remove image with a different tag
+```
+docker rmi nginx:alpine
+```
+
+Remove multiple images at once
+```
+docker postgres redis mysql nginx:1.14-alpine kodekloud/simple-webapp-mysql kodekloud/simple-webapp
+```
+
 
 
 
