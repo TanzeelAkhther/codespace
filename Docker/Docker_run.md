@@ -44,3 +44,7 @@ Container Logs
 docker logs <container_name>
 ```
 
+check the version along side pulling the image
+```
+docker run ubuntu cat /etc/*release*
+```
