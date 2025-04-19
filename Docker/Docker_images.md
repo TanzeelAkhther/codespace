@@ -16,6 +16,7 @@ ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 
 Build Image
 ```
+docker build .
 docker build Dockerfile -t mmusha/my-custom-app
 ```
 
