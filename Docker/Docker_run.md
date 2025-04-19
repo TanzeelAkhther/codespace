@@ -59,4 +59,7 @@ docker run -p 8080:8080 -v /root/my-jenkins-data:/var/jenkins_home -u root jenki
 #my-jenkins-data- new directory created inside root docker host
 #/var/jenkins_home - where container data is located
 #-u root :- for user
+
+
+docker run -p [HOST_PORT]:[CONTAINER_PORT] [IMAGE]
 ```
