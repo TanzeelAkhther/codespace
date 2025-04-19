@@ -36,3 +36,8 @@ Before pushing the image to docker you need to login to docker using
 docker login  #provide your credentials
 docker push mmushad/my-simple-web-app
 ```
+
+**Run an instance of the new image webapp-color:lite and publish port 8080 on the container to 8383 on the host.**
+```
+docker run -p 8383:8080 webapp-color:lite
+```
