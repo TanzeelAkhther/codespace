@@ -18,6 +18,8 @@ Build Image
 ```
 docker build .
 docker build Dockerfile -t mmusha/my-custom-app
+
+# At the end of the command, we used the "." (dot) symbol which indicates for the current directory,
 ```
 
 **Layered Architecture**
