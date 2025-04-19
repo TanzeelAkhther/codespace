@@ -28,3 +28,9 @@ docker build Dockerfile -t mmusha/my-custom-app
 5. Update Entrypoint with "flask" command
 
 All the layers are cached in case of failure of a particular step, if re-run it will use cache and run from the latest step, so we don't need to build entire image each time.
+
+Before pushing the image to docker you need to login to docker using
+```
+docker login  #provide your credentials
+docker push mmushad/my-simple-web-app
+```
