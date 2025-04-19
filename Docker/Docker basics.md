@@ -14,6 +14,12 @@ To see all running containers or not, it will display running as well as previou
 ```
 docker ps -a
 ```
+
+Access a container
+```
+docker exec -it <container_id or container_name> /bin/bash
+```
+
 To stop a running container use docker stop command with container ID or container name but it will be present and consume space
 ```
 docker stop silly_samet
