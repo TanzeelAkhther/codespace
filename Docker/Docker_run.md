@@ -48,3 +48,15 @@ check the version along side pulling the image
 ```
 docker run ubuntu cat /etc/*release*
 ```
+
+There are two ways of access the web, or particular application on the web UI.
+One is using the internalIP and two is using by mapping a port to my Docker Host and accessing it using the external IP.
+
+Access the application and store data as well 
+```
+docker run -p 8080:8080 -v /root/my-jenkins-data:/var/jenkins_home -u root jenkines
+
+#my-jenkins-data- new directory created inside root docker host
+#/var/jenkins_home - where container data is located
+#-u root :- for user
+```
