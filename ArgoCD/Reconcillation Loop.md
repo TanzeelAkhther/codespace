@@ -5,3 +5,7 @@ A *Reconcillation loop* is how often your ArgoCD application will synchronize fr
 The default *timeout_period* is set to three minutes. This value is configurabke and is used within the ArgoCD repo server.
 
 **ArgoCD_repo_server** - is responsible to retrieve the desired straight from Gitrepo server and it has a timeout option called as the *application_reconcillation_timeout*.
+
+The *API_Server* can be set up to receive webhook events in order to remove the polling delay.
+
+Within our Git Provider, we can create the *webhook* by defining the ArgoCD server instance endpoint append with */api/webhook.*
