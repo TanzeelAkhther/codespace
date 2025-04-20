@@ -1,0 +1,4 @@
+CMD - which stands for Command that defines the program that will run within the container.
+
+Containers are meant to run a specific task or process such as to host an instance of a web server, or application server..
+Once the task is complete, the container exits.
