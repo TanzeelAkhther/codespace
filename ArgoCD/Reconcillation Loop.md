@@ -9,3 +9,6 @@ The default *timeout_period* is set to three minutes. This value is configurabke
 The *API_Server* can be set up to receive webhook events in order to remove the polling delay.
 
 Within our Git Provider, we can create the *webhook* by defining the ArgoCD server instance endpoint append with */api/webhook.*
+
+Once the webhook is created, for every push event to to Git repository, the *webhook is going to send the events to the ArgoCD server*, and ArgoCD repo server will in turn pull the committed changes.
+*By using webhook we can remove the polling delay*
