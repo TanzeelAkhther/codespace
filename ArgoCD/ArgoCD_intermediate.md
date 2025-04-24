@@ -17,3 +17,13 @@ ArgoCD continuously pulls Git repositories for any new changes an at the same ti
 
 **Various Resource Health Checks**
 1. Healthy status - used when all the resources are 100% healthy.
+2. Progressing status - used if a resource is unhealthy but could still be healthy if given time
+3. Degraded status - used if a resource status indicates a failure or an inability to reach a healthy state in a timely manner.
+4. Missing status - used if resource is not present in the cluster.
+5. Suspended status - used if a resources is suspended or paused, typical example is a paused deployment.
+6. Unknown status - Health assessment failed and actual health status is unknown.
+
+For *Kubernetes_secrets* it will determine whether the service is of type load balancer, and verifies that the *loadbalancer.ingress_list* is not empty and that the *hostname* or *IP* has at least one value.
+
+
+
