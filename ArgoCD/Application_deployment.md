@@ -27,3 +27,11 @@ argocd app sync app1 app2    #Multiple application at once
 ```
 argocd app list
 ```
+
+**edit timeout.reconcilation setting**
+```
+#edit inside YAML for argocd svc configmap and add a data block but not nested inside metadata block
+
+data: 
+    timeout.reconciliation: 60s
+```
