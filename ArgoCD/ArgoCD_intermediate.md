@@ -12,3 +12,8 @@ Within our Git Provider, we can create the *webhook* by defining the ArgoCD serv
 
 Once the webhook is created, for every push event to to Git repository, the *webhook is going to send the events to the ArgoCD server*, and ArgoCD repo server will in turn pull the committed changes.
 *By using webhook we can remove the polling delay*
+
+ArgoCD continuously pulls Git repositories for any new changes an at the same time it will continuously check the status of kubernetes resources.
+
+**Various Resource Health Checks**
+1. Healthy status - used when all the resources are 100% healthy.
