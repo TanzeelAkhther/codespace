@@ -16,11 +16,15 @@ Common actions for Helm:
 - *helm get output* - (This command consists of multiple subcommands which can be used to
 get extended information about the release, including:
 
-- The values used to generate the release
-- The generated manifest file
-- The notes provided by the chart of the release
-- The hooks associated with the release
-- The metadata of the release)
+The values used to generate the release
+
+The generated manifest file
+
+The notes provided by the chart of the release
+
+The hooks associated with the release
+
+The metadata of the release)
 
 - *helm get hooks* - This command downloads hooks for a given release.
 Hooks are formatted in YAML and separated by the YAML '---\n' separator.
