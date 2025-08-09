@@ -1,4 +1,4 @@
-docker run tanzeel/simple-webapp
+ docker run tanzeel/simple-webapp
 docker run mongodb
 docker run redis:alpine
 docker run ansible
@@ -20,4 +20,5 @@ to up and running the docker container"
 docker-compose up
 ```
 
-<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/16921c07-8ee1-4216-a677-a0c54300cbba" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/6b9611cd-d3dc-4cc0-8aca-7cb4864026aa" />
+
